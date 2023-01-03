@@ -40,6 +40,10 @@ filmApp.displayFilms = function(dataFromApi){
     const liElement = document.createElement('li');
     liElement.textContent = films.title;
     ul.appendChild(liElement);
+    const imgElement = document.createElement(
+      "img");
+      imgElement.src = "https://image.tmdb.org/t/p/w500" + films.poster_path;
+      liElement.appendChild(imgElement);
   })
 }
 
