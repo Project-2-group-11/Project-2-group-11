@@ -27,12 +27,21 @@ filmApp.getFilms = function () {
       return response.json();
     })
     .then(function(jsonResponse) {
-      // console.log(jsonResponse)
-      return jsonResponse
+      console.log(jsonResponse)
+      filmApp.displayFilms(jsonResponse);
     })
 } 
 
+filmApp.displayFilms = function(dataFromApi){
+  const ul = document.querySelector('ul');
 
+  dataFromApi.results.forEach(function(films){
+    // console.log(films.title);
+    const liElement = document.createElement('li');
+    liElement.textContent = films.title;
+    ul.appendChild(liElement);
+  })
+}
 
 // url
 // filmApp.url = 'https://api.themoviedb.org/3/movie/top_rated'
