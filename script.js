@@ -34,6 +34,7 @@ filmApp.getFilms = function () {
 
 filmApp.displayFilms = function(dataFromApi){
   const ul = document.querySelector('ul');
+  ul.innerHTML = "";
 
   dataFromApi.results.forEach(function(films){
     // console.log(films.title);
@@ -42,10 +43,26 @@ filmApp.displayFilms = function(dataFromApi){
     ul.appendChild(liElement);
     const imgElement = document.createElement(
       "img");
-      imgElement.src = "https://image.tmdb.org/t/p/w500" + films.poster_path;
+      imgElement.src = "https://image.tmdb.org/t/p/w92" + films.poster_path;
       liElement.appendChild(imgElement);
   })
 }
+
+
+filmApp.regionsChanger = function () {
+  const buttons = document.querySelectorAll("button");
+  console.log(buttons)
+  buttons.forEach(function(individualButton) {
+    individualButton.addEventListener("click", function() {
+      const selectedRegion = this.id;
+      console.log(selectedRegion)
+      filmApp.getFilms(selectedRegion)
+    })
+  })
+
+}
+
+filmApp.regionsChanger()
 
 // url
 // filmApp.url = 'https://api.themoviedb.org/3/movie/top_rated'
