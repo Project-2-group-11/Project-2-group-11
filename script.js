@@ -11,7 +11,7 @@ filmApp.init = function () {
 }
 
 
-filmApp.getFilms = function () {
+filmApp.getFilms = function (selectedRegion) {
 
   const url = new URL ("https://api.themoviedb.org/3/movie/top_rated");
 
@@ -19,7 +19,7 @@ filmApp.getFilms = function () {
 
   url.search = new URLSearchParams({
     api_key: apiKey,
-    region: "CA"
+    region: selectedRegion
   })
 
   fetch(url)
@@ -38,13 +38,33 @@ filmApp.displayFilms = function(dataFromApi){
 
   dataFromApi.results.forEach(function(films){
     // console.log(films.title);
+    // create li element
     const liElement = document.createElement('li');
-    liElement.textContent = films.title;
-    ul.appendChild(liElement);
+    // create film container div to hold title and poster
+    const filmContainer = document.createElement('div');
+    // create title container div
+    const titleContainer = document.createElement('div');
+    // create poster container div
+    const posterContainer = document.createElement('div');
+    // append title container into film container
+    filmContainer.appendChild(titleContainer);
+    // append poster container into film container
+    filmContainer.appendChild(posterContainer);
+    // append filmContainer into liElement
+    liElement.appendChild(filmContainer);
+    // add film title in titleContainer
+    titleContainer.textContent = films.title;
+    // create poster img
     const imgElement = document.createElement(
       "img");
-      imgElement.src = "https://image.tmdb.org/t/p/w92" + films.poster_path;
-      liElement.appendChild(imgElement);
+    imgElement.src = "https://image.tmdb.org/t/p/w92" + films.poster_path;
+    imgElement.alt = `Poster of film ${films.title}`
+    liElement.appendChild(imgElement);
+    // append imgElement into poster container
+    posterContainer.appendChild(imgElement);
+
+    ul.appendChild(liElement);
+    
   })
 }
 
