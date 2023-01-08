@@ -42,18 +42,24 @@ filmApp.displayFilms = function(dataFromApi){
     const liElement = document.createElement('li');
     // create film container div to hold title and poster
     const filmContainer = document.createElement('div');
+    filmContainer.classList.add("film-container");
     // create title container div
     const titleContainer = document.createElement('div');
+    titleContainer.classList.add("text-container");
+    // create h2
+    const h2 = document.createElement("h2");
+    titleContainer.appendChild(h2);
     // create poster container div
     const posterContainer = document.createElement('div');
+    posterContainer.classList.add("image-container")
     // append title container into film container
     filmContainer.appendChild(titleContainer);
     // append poster container into film container
     filmContainer.appendChild(posterContainer);
     // append filmContainer into liElement
     liElement.appendChild(filmContainer);
-    // add film title in titleContainer
-    titleContainer.textContent = films.title;
+    // add film title in h2
+    h2.textContent = films.title;
     // create poster img
     const imgElement = document.createElement(
       "img");
