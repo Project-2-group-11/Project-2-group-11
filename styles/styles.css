@@ -233,9 +233,19 @@ ul {
 }
 
 body {
+  font-family: "Cabin", sans-serif;
+  font-size: 125%;
+}
+
+h1, h2 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
   background-color: #729B79;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
 }
