@@ -33,8 +33,8 @@ filmApp.getFilms = function (selectedRegion) {
 } 
 
 filmApp.displayFilms = function(dataFromApi){
-  const ul = document.querySelector('ul');
-  ul.innerHTML = "";
+  const ol = document.querySelector('ol');
+  ol.innerHTML = "";
 
   dataFromApi.results.forEach(function(films){
     // console.log(films.title);
@@ -69,7 +69,7 @@ filmApp.displayFilms = function(dataFromApi){
     // append imgElement into poster container
     posterContainer.appendChild(imgElement);
 
-    ul.appendChild(liElement);
+    ol.appendChild(liElement);
     
   })
 }
@@ -102,13 +102,13 @@ filmApp.regionsChanger()
 // convert to json
 // see how data is set up
 // save top-rated movie data to namespace object
-// hard code ul with list items
+// hard code ol with list items
   // each list item is a region button
   // user clicks region button
     // object with event listener for which button (region) is pressed
     // forEach loop through buttons (see function methods codealong)
       // depending on which region is selected(clicked), pull that regions top-rated 20 movies
-      // select ul
+      // select ol
       // create li element
       // create poster div for img
       // create img & pull poster data from API
@@ -118,7 +118,7 @@ filmApp.regionsChanger()
       // create h2 element for title & pull title data from API
       // append into text div
       // append img div and text div into li
-      // append all li in ul
+      // append all li in ol
       // top 20 movies appeear onto page!
 
 // let region = 'fr';
