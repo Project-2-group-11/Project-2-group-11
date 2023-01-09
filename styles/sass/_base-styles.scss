@@ -11,5 +11,16 @@ body {
 .wrapper {
    width: 90%;
    margin: 0 auto;
+   max-width: 1024px;
+}
+
+ol {
+  margin: 0 auto;
+  list-style-position: inside;
+  padding: 0;
+}
+
+h2 {
+  display: inline-block;
 }
 
