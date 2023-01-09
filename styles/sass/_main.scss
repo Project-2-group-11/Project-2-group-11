@@ -1,2 +1,8 @@
 @use "variables" as*;
 
+.main-container {
+  display: flex;
+    ul {
+      width: 20%;
+    }
+}
