@@ -9,5 +9,10 @@
     // font-size: 16px;
 
 body {
+    font-family: $secondary-font;
+    font-size: 125%;
+}
+
+h1, h2 {
     font-family: $primary-font;
 }
