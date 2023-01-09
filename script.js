@@ -1,15 +1,15 @@
 
 // apiKey = api_key=6a4a4881014f97005e421abe7a30bce2
 
-// PSEUDOCODE ******************
-// make a namespace with...
+// PSEUDOCODE *****************
 
+// set up init for namespace
 const filmApp = {};
 
 filmApp.init = function () {
   filmApp.getFilms();
+  filmApp.regionsChanger();
 }
-
 
 filmApp.getFilms = function (selectedRegion) {
 
@@ -22,16 +22,20 @@ filmApp.getFilms = function (selectedRegion) {
     region: selectedRegion
   })
 
+  // fetch from URL
   fetch(url)
     .then(function(response) {
+      // convert to json
       return response.json();
     })
     .then(function(jsonResponse) {
-      console.log(jsonResponse)
+      // see how data is set up
+      // console.log(jsonResponse)
       filmApp.displayFilms(jsonResponse);
     })
 } 
 
+// pass top-rated movie data to displayFilms function
 filmApp.displayFilms = function(dataFromApi){
   const ol = document.querySelector('ol');
   ol.innerHTML = "";
@@ -68,69 +72,29 @@ filmApp.displayFilms = function(dataFromApi){
     liElement.appendChild(imgElement);
     // append imgElement into poster container
     posterContainer.appendChild(imgElement);
-
+    // append all li in ol
     ol.appendChild(liElement);
+    // top 20 movies appeear onto page!
     
   })
 }
-
-
+   
 filmApp.regionsChanger = function () {
   const buttons = document.querySelectorAll("button");
-  console.log(buttons)
+  // console.log(buttons)
+  // forEach loop through buttons
   buttons.forEach(function(individualButton) {
+    // user clicks region button
     individualButton.addEventListener("click", function() {
+      // variable with event listener for which button (region) is pressed
       const selectedRegion = this.id;
-      console.log(selectedRegion)
+      // console.log(selectedRegion)
+      // depending on which region is selected(clicked), pull that regions top-rated 20 movies
       filmApp.getFilms(selectedRegion)
     })
   })
 
 }
 
-filmApp.regionsChanger()
-
-// url
-// filmApp.url = 'https://api.themoviedb.org/3/movie/top_rated'
-// // API key
-// filmApp.apiKey = 'api_key=6a4a4881014f97005e421abe7a30bce2'
-
-
-// set up init for namespace
-  // call init at end of code
-// fetch from URL
-// convert to json
-// see how data is set up
-// save top-rated movie data to namespace object
-// hard code ol with list items
-  // each list item is a region button
-  // user clicks region button
-    // object with event listener for which button (region) is pressed
-    // forEach loop through buttons (see function methods codealong)
-      // depending on which region is selected(clicked), pull that regions top-rated 20 movies
-      // select ol
-      // create li element
-      // create poster div for img
-      // create img & pull poster data from API
-      // declare src and alt for poster imgs
-      // append into poster div
-      // create text div for title
-      // create h2 element for title & pull title data from API
-      // append into text div
-      // append img div and text div into li
-      // append all li in ol
-      // top 20 movies appeear onto page!
-
-// let region = 'fr';
-
-// fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=6a4a4881014f97005e421abe7a30bce2&language=en-US&page=1&region=' + region)
-//   .then(res => res.json())
-//   .then(function (data) {
-//     // console.log(data)
-//     data.results.forEach(element => {
-//       console.log(`${element.title} https://image.tmdb.org/t/p/w500 ${element.poster_path}`);
-
-//     });
-//   })
-
+// call init at end of code
   filmApp.init();
