@@ -16,3 +16,14 @@ body {
 h1, h2 {
     font-family: $primary-font;
 }
+
+h1 {
+    font-size: 5rem;
+}
+
+button {
+   font-family: $secondary-font;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: 1.2px;
+}

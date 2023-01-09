@@ -241,6 +241,17 @@ h1, h2 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+h1 {
+  font-size: 5rem;
+}
+
+button {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
 body {
   background-color: #729B79;
 }
@@ -259,6 +270,14 @@ ol {
 
 h2 {
   display: inline-block;
+}
+
+button {
+  background-color: #F3E8EE;
+  padding: 10px 5px;
+  border-radius: 13px;
+  width: 110px;
+  margin: 10px;
 }
 
 .main-container {
