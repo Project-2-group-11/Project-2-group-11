@@ -235,6 +235,11 @@ ul {
 body {
   font-family: "Cabin", sans-serif;
   font-size: 125%;
+  color: #f6f6f6;
+}
+
+li::marker, h2 {
+  font-size: 1.8rem;
 }
 
 h1, h2 {
@@ -247,13 +252,13 @@ h1 {
 
 button {
   font-family: "Cabin", sans-serif;
-  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.2px;
+  color: #ffffff;
 }
 
 body {
-  background-color: #729B79;
+  background-color: #14181c;
 }
 
 .wrapper {
@@ -263,8 +268,7 @@ body {
 }
 
 ol {
-  margin: 0 auto;
-  list-style-position: inside;
+  margin: 0;
   padding: 0;
 }
 
@@ -273,7 +277,7 @@ h2 {
 }
 
 button {
-  background-color: #F3E8EE;
+  background-color: #00c030;
   padding: 10px 5px;
   border-radius: 13px;
   width: 110px;

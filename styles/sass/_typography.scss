@@ -11,6 +11,11 @@
 body {
     font-family: $secondary-font;
     font-size: 125%;
+    color: $clr-white-off;
+}
+
+li::marker, h2 {
+    font-size: 1.8rem;
 }
 
 h1, h2 {
@@ -23,7 +28,7 @@ h1 {
 
 button {
    font-family: $secondary-font;
-   font-weight: bold;
    text-transform: uppercase;
    letter-spacing: 1.2px;
+   color: $clr-white-lt;
 }
