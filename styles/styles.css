@@ -235,17 +235,60 @@ ul {
 body {
   font-family: "Cabin", sans-serif;
   font-size: 125%;
+  color: #f6f6f6;
+}
+
+li::marker, h2 {
+  font-size: 1.8rem;
 }
 
 h1, h2 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+h1 {
+  font-size: 5rem;
+}
+
+button {
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+}
+
 body {
-  background-color: #729B79;
+  background-color: #14181c;
 }
 
 .wrapper {
   width: 90%;
   margin: 0 auto;
+  max-width: 1024px;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  display: inline-block;
+}
+
+button {
+  background-color: #00c030;
+  padding: 10px 5px;
+  border-radius: 13px;
+  width: 110px;
+  margin: 10px;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-container ul {
+  width: 20%;
 }

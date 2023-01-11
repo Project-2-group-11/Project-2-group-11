@@ -11,5 +11,26 @@ body {
 .wrapper {
    width: 90%;
    margin: 0 auto;
+   max-width: 1024px;
+}
+
+ol {
+  margin: 0;
+  // list-style-position: inside;
+  padding: 0; 
+}
+
+h2 {
+  display: inline-block;
+}
+
+button {
+   background-color: $clr-accent;
+   padding: 10px 5px;
+   border-radius: 13px;
+   width: 110px;
+   margin: 10px; 
+
+
 }
 
