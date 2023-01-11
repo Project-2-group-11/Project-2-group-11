@@ -269,6 +269,7 @@ body {
 
 ol {
   margin: 0;
+  list-style-position: inside;
   padding: 0;
 }
 
