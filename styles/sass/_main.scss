@@ -1,8 +1,85 @@
 @use "variables" as*;
 
+
+
 .main-container {
   display: flex;
     ul {
       width: 20%;
     }
 }
+
+button {
+  background-color: $clr-accent;
+  padding: 10px 5px;
+  border-radius: 13px;
+  width: 110px;
+  margin: 10px; 
+  border: none;
+  &:hover {
+    border: 1px solid $clr-white-off;
+    background-color: $clr-accent-hover;
+    transition: 0.2s;
+  }
+  &:focus {
+    border: 1px solid $clr-white-off;
+    background-color: $clr-accent-hover;
+    transition: 0.2s;
+  }
+  @media (max-width: 650px) {
+    width: 80px;
+    padding: 5px 2.5px;
+    margin: 6px;
+  }
+}
+
+
+#back-to-top {
+ background-color: $clr-accent-alt;
+ display: inline-block;
+ padding: 10px 5px;
+ margin: 10px;
+ border-radius: 13px;
+ width: 110px;
+ text-align: center;
+ &:hover {
+  border: 1px solid $clr-white-off;
+  background-color: $clr-accent-alt-hover;
+  transition: 0.2s;
+ }
+ &:focus-within {
+  background-color: $clr-accent-alt-hover;
+  transition: 0.2s;
+ }
+ @media (max-width: 650px) {
+    width: 80px;
+    padding: 5px 2.5px;
+    margin: 6px;
+ }
+}
+
+li #back-to-top {
+  &:hover {
+    border: 1px solid $clr-white-off;
+  }
+  &:focus-within {
+    border: 1px solid $clr-white-off;
+  }
+}
+
+.ul-container {
+  position: sticky;
+  top: 5%;
+  height: 50vh;
+}
+
+ol {
+  margin-left: 50px;
+  @media(max-width: 350px) {
+    margin-left: 25px;
+  }
+  @media(max-width: 350px) {
+    margin-left: 10px;
+  }
+}
+

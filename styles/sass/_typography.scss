@@ -14,8 +14,11 @@ body {
     color: $clr-white-off;
 }
 
-li::marker, h2 {
+h2, li::marker {
     font-size: 1.8rem;
+    @media (max-width: 650px) {
+        font-size: 1.4rem;
+    }
 }
 
 h1, h2 {
@@ -24,11 +27,34 @@ h1, h2 {
 
 h1 {
     font-size: 5rem;
+    text-align: center;
+    @media (max-width: 950px) {
+        font-size: 3.5rem;
+    }
+    @media (max-width: 650px) {
+        font-size: 2.5rem;
+    }
+    @media (max-width: 350px) {
+        margin: 10px 0;
+    }
 }
+
 
 button {
    font-family: $secondary-font;
    text-transform: uppercase;
    letter-spacing: 1.2px;
    color: $clr-white-lt;
+//    @media (max-width)
+}
+
+.back-to-top {
+    text-decoration: none;
+    color: $clr-white-off;
+}
+
+.ul-container {
+    @media (max-width: 650px) {
+    font-size: 0.8rem;
+    }
 }
