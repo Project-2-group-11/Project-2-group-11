@@ -7,7 +7,7 @@
 const filmApp = {};
 
 filmApp.init = function () {
-  filmApp.getFilms();
+  filmApp.getFilms('CA');
   filmApp.regionsChanger();
 }
 

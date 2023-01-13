@@ -14,21 +14,53 @@ button {
   width: 110px;
   margin: 10px; 
   border: none;
+  &:hover {
+    border: 1px solid $clr-white-off;
+    background-color: $clr-accent-hover;
+    transition: 0.2s;
+  }
+  &:focus {
+    border: 1px solid $clr-white-off;
+    background-color: $clr-accent-hover;
+    transition: 0.2s;
+  }
 }
 
 
 #back-to-top {
- background-color: #FF8000;
+ background-color: $clr-accent-alt;
  display: inline-block;
  padding: 10px 5px;
  margin: 10px;
  border-radius: 13px;
  width: 110px;
+ &:hover {
+  border: 1px solid $clr-white-off;
+  background-color: $clr-accent-alt-hover;
+  transition: 0.2s;
+ }
+ &:focus-within {
+  background-color: $clr-accent-alt-hover;
+  transition: 0.2s;
+ }
+}
+
+li #back-to-top {
+  &:hover {
+    border: 1px solid $clr-white-off;
+  }
+  &:focus-within {
+    border: 1px solid $clr-white-off;
+  }
 }
 
 .ul-container {
   position: sticky;
   top: 5%;
   height: 50vh;
+}
+
+ol {
+  margin-left: 50px;
 }
 
