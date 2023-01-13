@@ -44,20 +44,20 @@ filmApp.displayFilms = function(dataFromApi){
     // console.log(films.title);
     // create li element
     const liElement = document.createElement('li');
-    // create film container div to hold title and poster
+    // create film container div to hold text and poster
     const filmContainer = document.createElement('div');
     filmContainer.classList.add("film-container");
-    // create title container div
-    const titleContainer = document.createElement('div');
-    titleContainer.classList.add("text-container");
+    // create text container div
+    const textContainer = document.createElement('div');
+    textContainer.classList.add("text-container");
     // create h2
     const h2 = document.createElement("h2");
-    titleContainer.appendChild(h2);
+    liElement.appendChild(h2);
     // create poster container div
     const posterContainer = document.createElement('div');
     posterContainer.classList.add("image-container")
-    // append title container into film container
-    filmContainer.appendChild(titleContainer);
+    // append text container into film container
+    filmContainer.appendChild(textContainer);
     // append poster container into film container
     filmContainer.appendChild(posterContainer);
     // append filmContainer into liElement
@@ -91,9 +91,22 @@ filmApp.regionsChanger = function () {
       // console.log(selectedRegion)
       // depending on which region is selected(clicked), pull that regions top-rated 20 movies
       filmApp.getFilms(selectedRegion)
+      filmApp.spanChanger(selectedRegion);
     })
   })
 
+}
+
+// define region title changer function
+filmApp.spanChanger = function(regionId){
+  // get button innerText with country name
+  const button = document.getElementById(regionId);
+  const buttonText = button.textContent;
+  console.log(button);
+  // select span in h1
+  const span = document.querySelector("#region");
+  // update span in h1 with innerText from button of corresponding region
+  span.innerText = buttonText
 }
 
 // call init at end of code
