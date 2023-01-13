@@ -6,3 +6,27 @@
       width: 20%;
     }
 }
+
+button {
+  background-color: $clr-accent;
+  padding: 10px 5px;
+  border-radius: 13px;
+  width: 110px;
+  margin: 10px; 
+  border: none;
+}
+
+
+#back-to-top {
+ background-color: #FF8000;
+ display: inline-block;
+ padding: 10px 5px;
+ margin: 10px;
+ border-radius: 13px;
+ width: 110px;
+}
+
+.ul-container {
+  position: sticky;
+}
+
