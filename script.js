@@ -91,17 +91,18 @@ filmApp.regionsChanger = function () {
       // console.log(selectedRegion)
       // depending on which region is selected(clicked), pull that regions top-rated 20 movies
       filmApp.getFilms(selectedRegion)
-      filmApp.spanChanger();
+      filmApp.spanChanger(selectedRegion);
     })
   })
 
 }
 
 // define region title changer function
-filmApp.spanChanger = function(){
+filmApp.spanChanger = function(regionId){
   // get button innerText with country name
-  const button = document.querySelectorAll("button");
+  const button = document.getElementById(regionId);
   const buttonText = button.textContent;
+  console.log(button);
   // select span in h1
   const span = document.querySelector("#region");
   // update span in h1 with innerText from button of corresponding region
