@@ -58,13 +58,13 @@ filmApp.displayFilms = function(dataFromApi){
         //adding class .voter-score
     pVote.classList.add("voter-score")
         //add voter score from api
-    pVote.textContent = `Average Score: ${films.vote_average}/10`;
+    pVote.textContent = `Score: ${films.vote_average}/10`;
     //create p with release data 
     const pRelease = document.createElement("p");
         //adding class .release-date
     pRelease.classList.add("release-date");
         //add release date from api
-    pRelease.textContent = films.release_date;
+    pRelease.textContent = `Released: ${films.release_date}`;
     //create p with overview 
     const pOverview = document.createElement("p");
         //adding class .overview
