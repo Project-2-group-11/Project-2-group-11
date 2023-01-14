@@ -11,10 +11,10 @@
 
 button {
   background-color: $clr-accent;
-  padding: 10px 5px;
+  padding: 6px 5px;
   border-radius: 13px;
   width: 110px;
-  margin: 10px; 
+  margin: 8px; 
   border: none;
   &:hover {
     border: 1px solid $clr-white-off;
@@ -37,8 +37,8 @@ button {
 #back-to-top {
  background-color: $clr-accent-alt;
  display: inline-block;
- padding: 10px 5px;
- margin: 10px;
+ padding: 6px 5px;
+ margin: 8px;
  border-radius: 13px;
  width: 110px;
  text-align: center;
