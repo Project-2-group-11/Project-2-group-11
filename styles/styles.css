@@ -246,6 +246,15 @@ h2, li::marker {
     font-size: 1.4rem;
   }
 }
+@media (max-width: 450px) {
+  h2, li::marker {
+    font-size: 1rem;
+  }
+}
+
+li::marker {
+  font-weight: bold;
+}
 
 h1, h2 {
   font-family: "Roboto Condensed", sans-serif;
@@ -297,6 +306,11 @@ body {
   width: 90%;
   margin: 0 auto;
   max-width: 1024px;
+}
+@media (max-width: 450px) {
+  .wrapper {
+    width: 95%;
+  }
 }
 
 ol {
@@ -390,7 +404,7 @@ li #back-to-top:focus-within {
 ol {
   margin-left: 50px;
 }
-@media (max-width: 350px) {
+@media (max-width: 650px) {
   ol {
     margin-left: 25px;
   }

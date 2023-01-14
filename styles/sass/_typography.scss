@@ -19,6 +19,13 @@ h2, li::marker {
     @media (max-width: 650px) {
         font-size: 1.4rem;
     }
+    @media (max-width: 450px) {
+        font-size: 1rem;
+    }
+}
+
+li::marker {
+    font-weight: bold;
 }
 
 h1, h2 {
