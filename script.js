@@ -53,6 +53,29 @@ filmApp.displayFilms = function(dataFromApi){
     // create h2
     const h2 = document.createElement("h2");
     liElement.appendChild(h2);
+    //create p with vote score 
+    const pVote = document.createElement("p");
+        //adding class .voter-score
+    pVote.classList.add("voter-score")
+        //add voter score from api
+    pVote.textContent = `Average Score: ${films.vote_average}/10`;
+    //create p with release data 
+    const pRelease = document.createElement("p");
+        //adding class .release-date
+    pRelease.classList.add("release-date");
+        //add release date from api
+    pRelease.textContent = films.release_date;
+    //create p with overview 
+    const pOverview = document.createElement("p");
+        //adding class .overview
+    pOverview.classList.add("overview");
+        //add overview data  from api
+    pOverview.textContent = films.overview;
+    //append all p to the .text-container div
+    textContainer.appendChild(pVote);
+    textContainer.appendChild(pRelease);
+    textContainer.appendChild(pOverview);
+
     // create poster container div
     const posterContainer = document.createElement('div');
     posterContainer.classList.add("image-container")
