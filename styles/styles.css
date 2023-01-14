@@ -319,10 +319,6 @@ ol {
   padding: 0;
 }
 
-h2 {
-  display: inline-block;
-}
-
 .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,4 +409,34 @@ ol {
   ol {
     margin-left: 10px;
   }
+}
+
+.film-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 25px;
+}
+
+.text-container {
+  margin-left: 25px;
+}
+
+.voter-score {
+  margin-top: 0;
+}
+
+h2 {
+  display: inline-block;
+}
+h2:first-child {
+  margin-top: 0;
+}
+
+.overview {
+  line-height: 1.4;
 }

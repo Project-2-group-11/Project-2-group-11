@@ -9,6 +9,7 @@
     }
 }
 
+// buttons sidebar styling
 button {
   background-color: $clr-accent;
   padding: 6px 5px;
@@ -32,7 +33,6 @@ button {
     margin: 6px;
   }
 }
-
 
 #back-to-top {
  background-color: $clr-accent-alt;
@@ -73,6 +73,7 @@ li #back-to-top {
   height: 50vh;
 }
 
+// film API data list styling (film-container, poster-container, etc)
 ol {
   margin-left: 50px;
   @media(max-width: 650px) {
@@ -82,6 +83,32 @@ ol {
     margin-left: 10px;
   }
 }
+
+.film-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 25px;
+}
+
+.text-container {
+  margin-left: 25px; 
+}
+
+.voter-score {
+  margin-top: 0;
+}
+
+h2 {
+  display: inline-block;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.overview {
+  line-height: 1.4;
+}
+
 
 
 
