@@ -88,7 +88,7 @@ ol {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 25px;
-  @media(max-width: 450px) {
+  @media(max-width: 500px) {
     flex-direction: column;
     justify-content: center;
   }
@@ -96,21 +96,21 @@ ol {
 
 .text-container {
   margin-left: 25px;
-  @media(max-width: 450px) {
+  @media(max-width: 500px) {
     margin-left: 0px;
     display: flex;
     // align-items: center;
     flex-direction: column;
   }
   p {
-    @media(max-width: 450px) {
+    @media(max-width: 500px) {
       margin: 5px 0px;
     }
   }
 }
 
 .image-container {
-  @media(max-width: 450px) {
+  @media(max-width: 500px) {
     display: flex;
     justify-content: center;
     margin-top: 10px;

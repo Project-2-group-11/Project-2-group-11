@@ -17,10 +17,10 @@ body {
 h2, li::marker {
     font-size: 1.8rem;
     @media (max-width: 650px) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
-    @media (max-width: 450px) {
-        font-size: 1rem;
+    @media (max-width: 500px) {
+        font-size: 1.3rem;
         margin-bottom: 10px; 
     }
 }
@@ -43,9 +43,22 @@ h1 {
         font-size: 2.5rem;
     }
     @media (max-width: 350px) {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 }
+
+#intro {
+    font-size: 2.5rem;
+    display: block;
+    font-style: italic;
+    @media (max-width: 950px) {
+        font-size: 1.75rem;
+    }
+    @media (max-width: 650px) {
+        font-size: 1.25rem;
+    }
+}
+
 
 
 button {
@@ -69,6 +82,7 @@ button {
 
 .text-container p {
     @media (max-width: 650px) {
-    font-size: 0.9rem;
+    font-size: 1rem;
     }
+
 }
