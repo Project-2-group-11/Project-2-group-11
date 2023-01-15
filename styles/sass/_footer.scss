@@ -1,0 +1,56 @@
+@use "variables" as*;
+
+footer {
+  background-color: $clr-base-lt;
+}
+
+.footer-container {
+  display: flex;
+  @media (max-width: 825px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+footer img {
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px;
+  width: 150px;
+  @media (max-width: 825px) {
+    margin: 5px;
+  }
+}
+
+.footer-text {
+  p {
+    line-height: 1.4;
+    margin: 5px 0px;
+    font-style: italic;
+    a {
+      text-decoration: none;
+      &:link {
+        color: $clr-white-off;
+      }
+      &:visited {
+        color: $clr-grey;
+      }
+      &:hover {
+        color: $clr-accent-alt;
+        border-bottom: 1px solid $clr-accent-alt;
+      }
+      &:focus {
+        color: $clr-accent-alt;
+      }
+    }
+  }
+  @media (max-width: 825px) {
+    text-align: center;
+  }
+}
+
+.logo {
+  width: 150px;
+}
