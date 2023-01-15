@@ -12,16 +12,15 @@ body {
    width: 90%;
    margin: 0 auto;
    max-width: 1024px;
+    @media (max-width: 450px){
+      width: 95%;
+    }
 }
 
 ol {
   margin: 0;
   list-style-position: inside;
   padding: 0; 
-}
-
-h2 {
-  display: inline-block;
 }
 
 

@@ -246,6 +246,15 @@ h2, li::marker {
     font-size: 1.4rem;
   }
 }
+@media (max-width: 450px) {
+  h2, li::marker {
+    font-size: 1rem;
+  }
+}
+
+li::marker {
+  font-weight: bold;
+}
 
 h1, h2 {
   font-family: "Roboto Condensed", sans-serif;
@@ -298,15 +307,16 @@ body {
   margin: 0 auto;
   max-width: 1024px;
 }
+@media (max-width: 450px) {
+  .wrapper {
+    width: 95%;
+  }
+}
 
 ol {
   margin: 0;
   list-style-position: inside;
   padding: 0;
-}
-
-h2 {
-  display: inline-block;
 }
 
 .main-container {
@@ -320,10 +330,10 @@ h2 {
 
 button {
   background-color: #00c030;
-  padding: 10px 5px;
+  padding: 6px 5px;
   border-radius: 13px;
   width: 110px;
-  margin: 10px;
+  margin: 8px;
   border: none;
 }
 button:hover {
@@ -349,8 +359,8 @@ button:focus {
 #back-to-top {
   background-color: #FF8000;
   display: inline-block;
-  padding: 10px 5px;
-  margin: 10px;
+  padding: 6px 5px;
+  margin: 8px;
   border-radius: 13px;
   width: 110px;
   text-align: center;
@@ -390,7 +400,7 @@ li #back-to-top:focus-within {
 ol {
   margin-left: 50px;
 }
-@media (max-width: 350px) {
+@media (max-width: 650px) {
   ol {
     margin-left: 25px;
   }
@@ -399,4 +409,34 @@ ol {
   ol {
     margin-left: 10px;
   }
+}
+
+.film-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 25px;
+}
+
+.text-container {
+  margin-left: 25px;
+}
+
+.voter-score {
+  margin-top: 0;
+}
+
+h2 {
+  display: inline-block;
+}
+h2:first-child {
+  margin-top: 0;
+}
+
+.overview {
+  line-height: 1.4;
 }
