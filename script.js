@@ -99,7 +99,7 @@ filmApp.displayFilms = function(dataFromApi){
     // create poster img
     const imgElement = document.createElement(
       "img");
-    imgElement.src = "https://image.tmdb.org/t/p/w92" + films.poster_path;
+    imgElement.src = "https://image.tmdb.org/t/p/w154" + films.poster_path;
     imgElement.alt = `Poster of film ${films.title}`
     liElement.appendChild(imgElement);
     // append imgElement into poster container
