@@ -25,13 +25,21 @@ filmApp.getFilms = function (selectedRegion) {
   // fetch from URL
   fetch(url)
     .then(function(response) {
-      // convert to json
-      return response.json();
+      if (response.ok) {
+        // convert to json
+        return response.json();
+      } else {
+        throw new Error (response.statusText)
+      }
+      
     })
     .then(function(jsonResponse) {
       // see how data is set up
       // console.log(jsonResponse)
       filmApp.displayFilms(jsonResponse);
+    })
+    .catch(function(error) {
+      alert("Something went wrong!")
     })
 } 
 
