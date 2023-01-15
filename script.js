@@ -64,7 +64,8 @@ filmApp.displayFilms = function(dataFromApi){
         //adding class .release-date
     pRelease.classList.add("release-date");
         //add release date from api
-    pRelease.textContent = `Released: ${films.release_date}`;
+    pRelease.textContent = `Released: ${new Date(films.release_date).getFullYear()}`;
+
     //create p with overview 
     const pOverview = document.createElement("p");
         //adding class .overview
