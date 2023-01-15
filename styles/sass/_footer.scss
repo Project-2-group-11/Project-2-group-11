@@ -1,0 +1,37 @@
+@use "variables" as*;
+
+footer {
+  background-color: $clr-base-lt;
+}
+
+.footer-container {
+  display: flex;
+}
+
+footer img {
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.footer-text {
+  p {
+    text-align: center;
+    line-height: 1.4;
+    margin: 5px 0px;
+    a {
+      text-decoration: none;
+      &:link {
+        color: $clr-grey;
+      }
+      &:visited {
+        color: $clr-grey;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 20%;
+}

@@ -301,7 +301,7 @@ button {
   font-family: "Cabin", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 .back-to-top {
@@ -502,4 +502,44 @@ h2:first-child {
 
 .overview {
   line-height: 1.4;
+}
+
+footer {
+  background-color: #2c3440;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer img {
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.footer-text p {
+  text-align: center;
+  line-height: 1.4;
+  margin: 5px 0px;
+}
+.footer-text p a {
+  text-decoration: none;
+}
+.footer-text p a:link {
+  color: #cbcbcb;
+}
+.footer-text p a:visited {
+  color: #cbcbcb;
+}
+
+.logo {
+  width: 20%;
 }
