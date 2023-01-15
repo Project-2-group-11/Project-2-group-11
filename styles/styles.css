@@ -264,6 +264,7 @@ h1, h2 {
 h1 {
   font-size: 5rem;
   text-align: center;
+  margin-bottom: 5px;
 }
 @media (max-width: 950px) {
   h1 {
@@ -281,18 +282,24 @@ h1 {
   }
 }
 
-#intro {
+p.instruction {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.intro {
   font-size: 2.5rem;
   display: block;
   font-style: italic;
 }
 @media (max-width: 950px) {
-  #intro {
+  .intro {
     font-size: 1.75rem;
   }
 }
 @media (max-width: 650px) {
-  #intro {
+  .intro {
     font-size: 1.25rem;
   }
 }
@@ -388,7 +395,7 @@ button:focus {
   }
 }
 
-#back-to-top {
+.back-to-top-button {
   background-color: #FF8000;
   display: inline-block;
   padding: 6px 5px;
@@ -397,29 +404,29 @@ button:focus {
   width: 110px;
   text-align: center;
 }
-#back-to-top:hover {
+.back-to-top-button:hover {
   border: 1px solid #f6f6f6;
   background-color: #df7000;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-#back-to-top:focus-within {
+.back-to-top-button:focus-within {
   background-color: #df7000;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 @media (max-width: 650px) {
-  #back-to-top {
+  .back-to-top-button {
     width: 80px;
     padding: 5px 2.5px;
     margin: 6px;
   }
 }
 
-li #back-to-top:hover {
+li.back-to-top-button:hover {
   border: 1px solid #f6f6f6;
 }
-li #back-to-top:focus-within {
+li.back-to-top-button:focus-within {
   border: 1px solid #f6f6f6;
 }
 

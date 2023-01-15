@@ -34,7 +34,7 @@ button {
   }
 }
 
-#back-to-top {
+.back-to-top-button {
  background-color: $clr-accent-alt;
  display: inline-block;
  padding: 6px 5px;
@@ -58,7 +58,7 @@ button {
  }
 }
 
-li #back-to-top {
+li.back-to-top-button {
   &:hover {
     border: 1px solid $clr-white-off;
   }
