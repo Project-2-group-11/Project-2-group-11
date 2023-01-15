@@ -249,6 +249,7 @@ h2, li::marker {
 @media (max-width: 450px) {
   h2, li::marker {
     font-size: 1rem;
+    margin-bottom: 10px;
   }
 }
 
@@ -295,6 +296,12 @@ button {
 @media (max-width: 650px) {
   .ul-container {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .text-container p {
+    font-size: 0.9rem;
   }
 }
 
@@ -421,9 +428,49 @@ ol {
           flex-direction: row-reverse;
   margin-bottom: 25px;
 }
+@media (max-width: 450px) {
+  .film-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .text-container {
   margin-left: 25px;
+}
+@media (max-width: 450px) {
+  .text-container {
+    margin-left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  .text-container p {
+    margin: 5px 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  .image-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 .voter-score {

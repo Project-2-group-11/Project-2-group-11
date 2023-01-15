@@ -21,6 +21,7 @@ h2, li::marker {
     }
     @media (max-width: 450px) {
         font-size: 1rem;
+        margin-bottom: 10px; 
     }
 }
 
@@ -63,5 +64,11 @@ button {
 .ul-container {
     @media (max-width: 650px) {
     font-size: 0.8rem;
+    }
+}
+
+.text-container p {
+    @media (max-width: 650px) {
+    font-size: 0.9rem;
     }
 }

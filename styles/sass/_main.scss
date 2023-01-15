@@ -88,10 +88,33 @@ ol {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 25px;
+  @media(max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .text-container {
-  margin-left: 25px; 
+  margin-left: 25px;
+  @media(max-width: 450px) {
+    margin-left: 0px;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+  }
+  p {
+    @media(max-width: 450px) {
+      margin: 5px 0px;
+    }
+  }
+}
+
+.image-container {
+  @media(max-width: 450px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 .voter-score {
