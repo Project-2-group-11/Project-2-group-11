@@ -59,14 +59,11 @@ h1 {
     }
 }
 
-
-
 button {
    font-family: $secondary-font;
    text-transform: uppercase;
    letter-spacing: 1.2px;
    color: $clr-white-off;
-//    @media (max-width)
 }
 
 .back-to-top {
@@ -84,5 +81,11 @@ button {
     @media (max-width: 650px) {
     font-size: 1rem;
     }
+}
 
+footer p {
+    font-size: 1.2rem;
+    @media (max-width: 650px) {
+     font-size: 1rem;
+    }
 }
