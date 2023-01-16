@@ -17,10 +17,11 @@ body {
 h2, li::marker {
     font-size: 1.8rem;
     @media (max-width: 650px) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
-    @media (max-width: 450px) {
-        font-size: 1rem;
+    @media (max-width: 500px) {
+        font-size: 1.3rem;
+        margin-bottom: 10px; 
     }
 }
 
@@ -35,6 +36,7 @@ h1, h2 {
 h1 {
     font-size: 5rem;
     text-align: center;
+    margin-bottom: 5px;
     @media (max-width: 950px) {
         font-size: 3.5rem;
     }
@@ -42,17 +44,35 @@ h1 {
         font-size: 2.5rem;
     }
     @media (max-width: 350px) {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 }
 
+p.instruction {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+  
+
+.intro {
+    font-size: 2.5rem;
+    display: block;
+    font-style: italic;
+    @media (max-width: 950px) {
+        font-size: 1.75rem;
+    }
+    @media (max-width: 650px) {
+        font-size: 1.25rem;
+    }
+}
 
 button {
    font-family: $secondary-font;
    text-transform: uppercase;
    letter-spacing: 1.2px;
-   color: $clr-white-lt;
-//    @media (max-width)
+   color: $clr-white-off;
 }
 
 .back-to-top {
@@ -63,5 +83,18 @@ button {
 .ul-container {
     @media (max-width: 650px) {
     font-size: 0.8rem;
+    }
+}
+
+.text-container p {
+    @media (max-width: 650px) {
+    font-size: 1rem;
+    }
+}
+
+footer p {
+    font-size: 1.2rem;
+    @media (max-width: 650px) {
+     font-size: 1rem;
     }
 }

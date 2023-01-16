@@ -35,7 +35,6 @@ filmApp.getFilms = function (selectedRegion) {
     })
     .then(function(jsonResponse) {
       // see how data is set up
-      // console.log(jsonResponse)
       filmApp.displayFilms(jsonResponse);
     })
     .catch(function(error) {
@@ -49,7 +48,6 @@ filmApp.displayFilms = function(dataFromApi){
   ol.innerHTML = "";
 
   dataFromApi.results.forEach(function(films){
-    // console.log(films.title);
     // create li element
     const liElement = document.createElement('li');
     // create film container div to hold text and poster
@@ -113,14 +111,12 @@ filmApp.displayFilms = function(dataFromApi){
    
 filmApp.regionsChanger = function () {
   const buttons = document.querySelectorAll("button");
-  // console.log(buttons)
   // forEach loop through buttons
   buttons.forEach(function(individualButton) {
     // user clicks region button
     individualButton.addEventListener("click", function() {
       // variable with event listener for which button (region) is pressed
       const selectedRegion = this.id;
-      // console.log(selectedRegion)
       // depending on which region is selected(clicked), pull that regions top-rated 20 movies
       filmApp.getFilms(selectedRegion)
       filmApp.spanChanger(selectedRegion);
@@ -134,7 +130,6 @@ filmApp.spanChanger = function(regionId){
   // get button innerText with country name
   const button = document.getElementById(regionId);
   const buttonText = button.textContent;
-  console.log(button);
   // select span in h1
   const span = document.querySelector("#region");
   // update span in h1 with innerText from button of corresponding region
